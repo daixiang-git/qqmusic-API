@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="My Play Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!-- bootstrap -->
+    <link href="/css/bootstrap.min.css" rel='stylesheet' type='text/css' media="all"/>
+    <!-- //bootstrap -->
+    <link href="/css/dashboard.css" rel="stylesheet"/>
+    <!-- Custom Theme files -->
+    <link href="/css/style.css" rel='stylesheet' type='text/css' media="all"/>
+    <!--start-smoth-scrolling-->
+    <script src="https://cdn.bootcss.com/vue/2.3.4/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <!-- //fonts -->
+</head>
+<body>
+<div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 main" id="app">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index/"><h1><img src="/images/logo.png" alt=""/></h1></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="top-search">
+                    <form class="navbar-form navbar-right" action="/index/search">
+                        <input type="text" class="form-control" name='keyword' placeholder="Search..." />
+                        <input type="hidden" name="page" value="0" />
+                        <input type="submit" value=" " />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-grids">
+        <div class="top-grids">
+            <div class="recommended-grids">
+                <div class="recommended-info">
+                    <h3>新歌推荐</h3>
+                </div>
+                <div class="col-md-3 resent-grid recommended-grid" v-for="mn in newmusic">
+                    <div class="resent-grid-img recommended-grid-img">
+                        <a :href="'/index/play?song_id='+mn.song_id+'&amp;name='+mn.name+'&amp;songer='+mn.songer+'&amp;album_id='+mn.album_id"><img
+                                :src="mn.image_linking" :alt="mn.name"/></a>
+                    </div>
+                    <div class="resent-grid-info recommended-grid-info video-info-grid">
+                        <h5><a :href="'/index/search?keyword='+mn.name+'&amp;page=0'" class="author">歌名：{{mn.name}}</a></h5>
+                        <h5><a :href="'/index/search?keyword='+mn.album+'&amp;page=0'" class="author">专辑：{{mn.album}}</a></h5>
+                        <ul>
+                            <li><p class="author author-info"><a :href="'/index/search?keyword='+mn.songer+'&amp;page=0'" class="author" :title="mn.songer">歌手：{{mn.songer}}</a></p></li>
+                            <li class="right-list"><p class="views views-info">播放次数：{{mn.playtime}}</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="recommended">
+            <div class="recommended-grids">
+                <div class="recommended-info">
+                    <h3>排行榜</h3>
+                </div>
+                <div class="col-md-3 resent-grid recommended-grid" v-for="h in hit">
+                    <div class="resent-grid-img recommended-grid-img">
+                        <a :href="'/index/play?song_id='+h.song_id+'&amp;name='+h.name+'&amp;songer='+h.songer+'&amp;album_id='+h.album_id"><img
+                                :src="h.image_linking"
+                                :alt="h.name"/></a>
+                    </div>
+                    <div class="resent-grid-info recommended-grid-info video-info-grid">
+                        <h5><a :href="'/index/search?keyword='+h.name+'&amp;page=0'" class="author">歌名：{{h.name}}</a></h5>
+                        <h5><a :href="'/index/search?keyword='+h.album+'&amp;page=0'" class="author">专辑：{{h.album}}</a></h5>
+                        <ul>
+                            <li><p class="author author-info"><a :href="'/index/search?keyword='+h.songer+'&amp;page=0'" class="author">歌手：{{h.songer}}</a></p></li>
+                            <li class="right-list"><p class="views views-info">播放次数：{{h.playtime}}</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/index.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+</body>
+</html>

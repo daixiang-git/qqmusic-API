@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" />
+<html class="js cssanimations">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <title>点歌台</title>
+    <meta name="HandheldFriendly" content="True"/>
+    <link rel="shortcut icon" href="http://cdn.static.54php.cn/images/icon.png"/>
+    <link rel="icon" href="http://cdn.static.54php.cn/images/icon.png"/>
+    <link href="/css/amazeui.css" rel="stylesheet"/>
+    <link href="/css/common.css" rel="stylesheet"/>
+    <link href="/css/info.css" rel="stylesheet"/>
+</head>
+<body class="am-with-fixed-navbar">
+<div class="am-g">
+    <header data-am-widget="header" class="am-header am-header-default am-no-layout" style="display: none;">
+        <div class="am-header-left am-header-nav">
+            <i class="am-header-icon am-icon-home"></i>
+        </div>
+        <h1 class="am-text-center" style="color: #ffffff;">
+            点歌台 </h1>
+    </header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/index/"><h1><img src="/images/logo.png" alt=""/></h1></a>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="am-u-sm-12 am-u-md-12 am-u-lg-12 am-text-center">
+            <div id="music-pic" class="">
+                <img src="/images/play.png" class="btn_play" style="display: none;"/>
+                <img src="/images/pause.png" class="btn_pause" style="display: none;"/>
+                <img src="/images/refresh.png" class="btn_refresh" style="display: block;"/>
+            </div>
+            <h3 id="songer" ></h3>
+            <h3 id="musicname"></h3>
+        </div>
+        <div class="am-u-sm-12 am-u-md-12 am-u-lg-12 am-text-center" style="height: 200px;
+    overflow: hidden;">
+            <div id="lrc_box">
+            </div>
+        </div>
+        <input id="song_id" value="" type="hidden"/>
+    </section>
+    <div class="am-u-sm-12 am-u-md-12 am-u-lg-12 am-text-center">
+        <br/>
+        <br/>
+        <br/>
+        <h2 id="download" ></h2>
+    </div>
+    <!--<a id ="download " href="">下载</a>-->
+
+</div>
+<script src="/js/jquery.js"></script>
+<script src="/js/amazeui.js"></script>
+<script src="/js/info.js"></script>
+
+
+</body>
+</html>
