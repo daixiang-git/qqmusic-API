@@ -1,4 +1,4 @@
 # qqmusic-API
-web端实现QQ音乐api
+web端实现QQ音乐
 
-框架使用springboot
+springboot+QQ音乐api
